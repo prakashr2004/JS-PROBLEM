@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dom.css">
+</head>
+<div class="container">
+<h3>click me to the change the color</h3>
+<div class="btn-container">
+<button id="first">click Me</button>
+<button  id="second">click Me</button>
+<button id="therd">click Me</button>
+</div>
+</div>
+</body>
+<script>
+
+    let btn1 = document.getElementById("first");
+    let btn2 = document.getElementById("second");
+    let btn3 = document.getElementById("therd")
+    btn1.addEventListener("click",function(){changeColor(btn1)});
+      btn2.addEventListener("click",function(){changeColor(btn2)})
+      btn3.addEventListener("click",function(){changeColor(btn3)})
+
+
+
+  function  changeColor (element){
+ 
+    console.log(element.innerText)
+
+    if(element.innerText=='click Me'){      
+       element.style.backgroundColor = 'red'
+      element.innerText = 'clicked'
+         
+    }else if(element.innerText == "clicked"){
+
+      element.style.backgroundColor = 'blueviolet'
+      element.innerText='click Me'
+      
+    }
+
+  }
+
+
+
+    
+
+     
+</script>
+</html>
+
+
+
